@@ -32,6 +32,7 @@ function getdate() {
     document.getElementById("showdate").innerHTML = new Date();
 }
 
+
 //function documentReady(){}//присвоить increment к html?
 //создать многостраничный сайт с вводом в форму
 //картинки? js? создать to-do list на странице
