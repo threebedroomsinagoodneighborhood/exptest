@@ -1,21 +1,91 @@
 <!DOCTYPE html>
-
-<html>
+<!--вставила англ потому что русского языка пока нет-->
+<html lang="en">
 
 <head>
+    <!--раскладка-->
     <meta charset="utf-8">
+    <!--?-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
+    <!--название-->
+    <title>playground</title>
+    <!--тоже название?-->
+    <meta name="description" content="DEV test">
+    <!--меняет размер страницы в зависимости от размера окна или устройства-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css"><!---->
+    <!--ссылки на файлы с css и js-->
+    <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
-    <h1 id="counter_text">0</h1>
-    <button class="custom-button" type="button" onclick="increment()">incr counter</button>
-    <button type="button" onclick="decrement()">decr counter</button>
+    <span>
+        <div class="div-1">
+            <!--цифра и кнопки изменения цифры-->
+            <h1 id="counter_text">0</h1>
+            <button class="button-increment" type="button" onclick="increment()">Increment</button>
+            <button class="button-decrement" type="button" onclick="decrement()">Decrement</button>
+            <!--запоминать цифру через куки?-->
+
+            <!--обновление страницы-->
+            <form class="form-refresh" action="index.html" method="GET">
+                <input type="text" name="input" placeholder="?">
+                <button type="submit"">Refresh page</button>
+            </form>
+        </div>
+
+
+        <!--картинка кота-->
+        <img src="https://64.media.tumblr.com/d1f14b4e44ef604220082eea370411d9/4c42a286990672bb-45/s75x75_c1/9bc03c3b2da83e718b24ff7ee34577037436ab98.webp" alt="funny cat"></img>
+
+
+
+        <div class="div-2">
+            <h6 id="form-text">This form is EVIL</h1>
+            <form class="form-evil">
+                ?!
+                <input type="submit" name="evil">
+            </form>
+        </div>
+
+
+
+        <div class="div-3">
+            <!--таблица пока неизменная-->
+            <h3 id="list-tasks">Remaining tasks:</h5>
+            <table>
+                <tr>
+                    <th>Task</th>
+                    <th>Progress</th>
+                </tr>
+                <tr>
+                    <td>Website</td>
+                    <!--<td id="right-on-list" style="float:right;">0%</td>сюда вставить слайдер-->
+                    <td>0%</td>
+                </tr>
+                <tr>
+                    <td>
+                        Slider
+                    </td>
+                    <td>
+                        <input type="range" min="0" max="100" value="0">
+                    </td>
+                </tr>
+                <!--сюда вставить кнопку <button>Add row</button>-->
+            </table>
+        </div>
+    </span>
+
+
+
+    <span class="span-navigation">
+        <!--переключение по страницам, которых пока нет-->
+        <a href="complex.html" class="navigation" title="Page 2">Next Page</a>
+        <a href="simple.html" class="navigation" title="Page 1">Previous Page</a>
+
+        <!--показать дату и время на кнопке-->
+        <button id="showdate" class="datebutton" type="button" onclick="getdate()">Show date</button>
+    </span>
 </body>
 
 </html>
