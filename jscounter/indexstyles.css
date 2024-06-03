@@ -1,0 +1,76 @@
+/*первая страница*/
+* {
+    margin: 5px;
+    /*включить темный режим
+    background-color: rgb(43, 20, 32);
+    color: white;
+    */
+
+}
+
+
+div {
+    float: left;
+    border: 1px solid red;
+}
+
+.span-navigation {
+    border: 1px solid blue;
+    position: relative;
+    float: right;
+}
+
+/*input {    height: auto;    width: auto;}*/
+
+/*первый блок*/
+
+#counter_text {
+    color: #1daa97
+}
+
+/*убрала формат кнопки
+.button-increment {
+    height: 60px;
+    width: 250px;
+    font-size: 20px;
+    position:unset;
+}
+*/
+
+/*второй блок*/
+
+img {
+    float: inline-start;
+    max-width: 100%;
+    /*width:6.2%;*/
+    /*size-adjust:unset;*/
+}
+
+#form-text {
+    color: #540cda
+}
+
+/*третий блок*/
+
+#list-tasks {
+    color: #c8143ed9;
+}
+
+th,
+td {
+    border-style: inset;
+    text-align-last: center;
+}
+
+/*страницы и дата*/
+
+.navigation {
+    float: right;
+}
+
+#showdate {
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    float: right;
+}

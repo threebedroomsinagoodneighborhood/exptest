@@ -14,8 +14,9 @@
     <!--меняет размер страницы в зависимости от размера окна или устройства-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--ссылки на файлы с css и js-->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="indexstyles.css">
     <script type="text/javascript" src="index.js"></script>
+    <noscript>?!</noscript>
 </head>
 
 <body>
@@ -84,7 +85,7 @@
         <a href="simple.html" class="navigation" title="Page 1">Previous Page</a>
 
         <!--показать дату и время на кнопке-->
-        <button id="showdate" class="datebutton" type="button" onclick="getdate()">Show date</button>
+        <button onmouseover="this.style.backgroundColor='pink'" onmouseout="this.style.backgroundColor=''" id="showdate" class="datebutton" type="button" onclick="getdate()">Show date</button>
     </span>
 </body>
 
