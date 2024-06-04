@@ -15,38 +15,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--ссылки на файлы с css и js-->
     <link rel="stylesheet" href="indexstyles.css">
+    <link rel="stylesheet" href="headerstyles.css">
     <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="header.js"></script>
     <noscript>?!</noscript>
 </head>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:32px; height:32px; float:right;">
+    <!--     !Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+    <path
+        d="M168.5 72L256 165l87.5-93h-175zM383.9 99.1L311.5 176h129L383.9 99.1zm50 124.9H256 78.1L256 420.3 433.9 224zM71.5 176h129L128.1 99.1 71.5 176zm434.3 40.1l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4z" />
+</svg>
 
 <body>
+    <div id="header"></div>
     <span>
         <div class="div-1">
             <!--цифра и кнопки изменения цифры-->
-            <h1 id="counter_text">0</h1>
-            <button class="button-increment" type="button" onclick="increment()">Increment</button>
-            <button class="button-decrement" type="button" onclick="decrement()">Decrement</button>
-            <!--запоминать цифру через куки?-->
 
+            <h1 style="font-size: 32px;" id="counter_text">0</h1>
+            <button class="button-increment" type="button"
+                id="button-incr"><!--onclick="increment()"-->Increment</button>
+            <button class="button-decrement" type="button" id="button-decr">
+                <!-- onclick="decrement()" -->Decrement</button>
+            <!--запоминать цифру через куки?-->
+            <!-- <input id="slider" type="range" min="0" max="10" value="0"> -->
             <!--обновление страницы-->
             <form class="form-refresh" action="index.html" method="GET">
                 <input type="text" name="input" placeholder="?">
-                <button type="submit"">Refresh page</button>
+                <button type="submit">Refresh page</button>
             </form>
+
         </div>
 
 
         <!--картинка кота-->
-        <img src="https://64.media.tumblr.com/d1f14b4e44ef604220082eea370411d9/4c42a286990672bb-45/s75x75_c1/9bc03c3b2da83e718b24ff7ee34577037436ab98.webp" alt="funny cat"></img>
+        <img src=" https://64.media.tumblr.com/d1f14b4e44ef604220082eea370411d9/4c42a286990672bb-45/s75x75_c1/9bc03c3b2da83e718b24ff7ee34577037436ab98.webp"
+            alt="funny cat">
 
 
 
         <div class="div-2">
             <h6 id="form-text">This form is EVIL</h1>
-            <form class="form-evil">
-                ?!
-                <input type="submit" name="evil">
-            </form>
+                <form class="form-evil">
+                    ?!
+                    <input type="submit" name="evil">
+                </form>
         </div>
 
 
@@ -54,26 +67,26 @@
         <div class="div-3">
             <!--таблица пока неизменная-->
             <h3 id="list-tasks">Remaining tasks:</h5>
-            <table>
-                <tr>
-                    <th>Task</th>
-                    <th>Progress</th>
-                </tr>
-                <tr>
-                    <td>Website</td>
-                    <!--<td id="right-on-list" style="float:right;">0%</td>сюда вставить слайдер-->
-                    <td>0%</td>
-                </tr>
-                <tr>
-                    <td>
-                        Slider
-                    </td>
-                    <td>
-                        <input type="range" min="0" max="100" value="0">
-                    </td>
-                </tr>
-                <!--сюда вставить кнопку <button>Add row</button>-->
-            </table>
+                <table>
+                    <tr>
+                        <th>Task</th>
+                        <th>Progress</th>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <!--<td id="right-on-list" style="float:right;">0%</td>сюда вставить слайдер-->
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Slider
+                        </td>
+                        <td>
+                            <input type="range" min="0" max="10" value="0">
+                        </td>
+                    </tr>
+                    <!--сюда вставить кнопку <button>Add row</button>-->
+                </table>
         </div>
     </span>
 
@@ -85,7 +98,8 @@
         <a href="simple.html" class="navigation" title="Page 1">Previous Page</a>
 
         <!--показать дату и время на кнопке-->
-        <button onmouseover="this.style.backgroundColor='pink'" onmouseout="this.style.backgroundColor=''" id="showdate" class="datebutton" type="button" onclick="getdate()">Show date</button>
+        <button onmouseover="this.style.backgroundColor='pink'" onmouseout="this.style.backgroundColor=''"
+            id="button-showdate" class="datebutton" type="button">Show date</button><!-- onclick="getdate()" -->
     </span>
 </body>
 

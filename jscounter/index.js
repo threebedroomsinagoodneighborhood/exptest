@@ -1,39 +1,46 @@
 //стр index
 //первые кнопки для изменения цифры
-
 let counter = 0;
+//function documentReady(){}//присвоить increment к html
+document.addEventListener("DOMContentLoaded", function () {
+    const buttonIncrement = document.querySelector("#button-incr")
+    buttonIncrement.addEventListener("click", function () {
+        counter++;
+        console.log(counter);
+        document.getElementById("counter_text").textContent = counter;
+        console.log(document.getElementById("counter_text").style.fontSize);
+        document.getElementById("counter_text").style.fontSize = Number(document.getElementById("counter_text").style.fontSize.slice(0, 2)) + 1 + "px";
+        //изменить размер шрифта только одной цифры
+    })
 
-function increment() {
-    counter++;
-    console.log(counter);
-    document.getElementById("counter_text").textContent = counter;
-}
+    const buttonDecrement = document.querySelector("#button-decr")
+    buttonDecrement.addEventListener("click", function () {
+        counter--;
+        console.log(counter);
+        document.getElementById("counter_text").textContent = counter;
+        console.log(document.getElementById("counter_text").style.fontSize);
+        document.getElementById("counter_text").style.fontSize = Number(document.getElementById("counter_text").style.fontSize.slice(0, 2)) - 1 + "px";
+        //хотелось бы менять шрифт всей страницы
+    })
 
-function decrement() {
-    counter--;
-    console.log(counter);
-    document.getElementById("counter_text").textContent = counter;
-}
+    //дата и время
+    const buttonDate = document.querySelector("#button-showdate")
+    buttonDate.addEventListener("click", function () {
+        console.log(Date());
+        document.getElementById("button-showdate").innerHTML = new Date();
+    })
 
-//дата и время
+    //будущие функции
 
-function getdate() {
-    console.log(Date());
-    document.getElementById("showdate").innerHTML = new Date();
-}
+    function changesize() {
+        //<button type="button" onclick="document.getElementById('*').style.fontSize='35px'">incr</button>
+    }
 
-//будущие функции
+    function addtolist() {
+        //добавляет новые строки к выбору по галочкам
+    }
 
-function changesize() {
-    //изменяет шрифт всей страницы по кнопкам incr и decr
-    //<button type="button" onclick="document.getElementById('*').style.fontSize='35px'">incr</button>
-}
-
-function addtolist() {
-    //добавляет новые строки к выбору по галочкам
-}
-
-//function documentReady(){}//присвоить increment к html?
+})
 //создать многостраничный сайт с вводом в форму
 //картинки? js? создать to-do list на странице
 
