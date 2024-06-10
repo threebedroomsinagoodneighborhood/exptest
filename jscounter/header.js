@@ -2,7 +2,7 @@ const navbar = `
 <nav class="navbar">
     <div class="navbar__container">
         <a href="/" id="navbar__logo"><!--<i class="fas fa-gem"></i>-->
-            &#128151YAY&#128151</a><!--сердечко-->
+            &#128151</a><!--сердечко-->
         <div class="navbar__toggle" id="mobile-menu">
             <!--почему меню не отображается-->
             <span class="bar"></span>
@@ -17,19 +17,55 @@ const navbar = `
         </div>
         <ul class="navbar__menu">
             <li class="navbar__item">
-                <a href="/" class="navbar__links"> Home </a>
+                <a href="../pretty/complex.html" class="navbar__links"> Home </a>
             </li>
             <li class="navbar__item">
-                <a href="index.html" class="navbar__links"> Dev </a>
+                <a href="../playground/index.html" class="navbar__links"> Dev </a>
             <li class="navbar__btn">
-                <a href="/" class="button"> Sign Up </a>
+                <a href="../api/simple.html" class="button"> Sign Up </a>
             </li>
         </ul>
     </div>
 </nav>
 `
 document.addEventListener("DOMContentLoaded", function () {
-    /* header */
-    const header = document.querySelector("#header")
-    header.outerHTML = navbar;
+  /* header */
+  const header = document.querySelector("#header")
+  header.outerHTML = navbar;
+})
+
+const f = `
+<nav class="footer">
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/">Contact us</a>
+            <a href="/">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="https://www.rudn.ru/" id="footer__logo"
+              ><i class="fas fa-gem"></i>RUDN</a
+            >
+          </div>
+          <p class="website__rights">All rights reserved 2024</p>
+          <div class="social__icons">
+            <a href="/" class="social__icon--link" target="_blank">
+              <i class="fab fa-email"></i>rudn@pfur.ru</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+`
+document.addEventListener("DOMContentLoaded", function () {
+  /* footer */
+  const footer = document.querySelector("#footer")
+  footer.outerHTML = f;
 })

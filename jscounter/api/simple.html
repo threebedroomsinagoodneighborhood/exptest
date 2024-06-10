@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms and API</title>
+    <link rel="stylesheet" href="../pretty/styles.css" />
+    <link rel="stylesheet" href="../headerstyles.css" />
+    <script type="text/javascript" src="../header.js"></script>
+    <link rel="stylesheet" href="../api/formstyles.css" />
+    <script type="text/javascript" src="../api/form.js"></script>
+    <noscript>?!</noscript>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <div class="main">
+      <div class="main__content">
+
+        <!--здесь менялся бы текст по api-->
+        <h2 id="heading2">&#128146</h2>
+
+        <!--просто форма-->
+        <form
+          id="form"
+          action="/"
+          method="dialog"
+          onsubmit="return formAction(this)"
+        >
+          <label for="text"><br />Request a movie<br /></label>
+          <input type="text" name="text" placeholder="movie name" />
+          <label for="password"><br />Password<br /></label>
+          <input type="password" name="password" />
+          <label for="checkpw"><br />Confirm password<br /></label>
+          <input type="password" name="checkpw" /><br />
+          <input type="submit" />
+        </form>
+
+        <!--тест с котами-->
+        <div class="container">
+          <div class="card">
+            <img src="/" alt="cat image" class="img" />
+          </div>
+          <button class="catbutton" type="button" onclick="fetchHandler()">
+            Generate cat image
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>
